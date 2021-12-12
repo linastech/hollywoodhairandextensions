@@ -1,0 +1,89 @@
+// components/heading/Services.module.scss
+.contentWrapper{
+  display: flex;
+  margin: 4rem 0 0;
+  .content{
+    flex: 1;
+    line-height: 2rem;
+    margin: 0 13rem 0 4rem;
+    h3{
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      font-family: 'Playfair Display', serif;
+    }
+    p{
+      margin: 2rem 0 2rem;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      white-space: normal;  
+    }
+    button{
+      float: right;
+      margin-right: -5rem;
+    }
+    .line{
+      position: relative;
+      background-color: #f2f2f2;
+      height: 5px;
+      clear: right;
+      width: 144%;
+      margin: 7rem 0 0 -12rem;
+      &:before, &:after{
+        position: absolute;
+        content: "";
+        background: #7b9cee;
+        width: 12px;
+        height: 12px;
+        border-radius: 20px;
+        top: -3px;
+      }
+      &:before{
+        left: 30%;
+      }
+      &:after{
+        left: 70%;
+      }
+    }
+  }
+}
+.listWrapper{
+  margin: 5rem auto;
+  ul{
+    display: flex;
+    justify-content: space-between;
+  }
+  .button{
+    transition: ease-in-out .3s;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-top: 1.6rem;
+    cursor: pointer;
+    &.active, &:hover{
+      color: #7b9cee;
+    }
+  }
+}
+.bold{
+  font-weight: 800;
+}
+.selected{
+  background-size: cover;
+  border-radius: 200px;
+  position: relative;
+  z-index: 1;
+  &:before{
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    right: 9px;
+    bottom: 9px;
+    border-radius: 200px;
+    border: 1px solid #fff;
+    opacity: 0.4;
+  }
+}

@@ -1,0 +1,14 @@
+// components/heading/Button.module.scss
+.button{
+  background: #fff;
+  line-height: 3.4rem;
+  border-radius: 28px;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  font-weight: 600;
+  justify-content: space-between;
+  border: 1px solid #dfd8d880;
+  i{
+    margin-left: 0.5rem;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "hollywoodhairandextensions",
+  "author": "linas rakauskas",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "classnames": "2.2.6",
+    "next": "latest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+  },
+  "license": "MIT"
+}

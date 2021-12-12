@@ -1,0 +1,29 @@
+// components/footer/Footer.module.scss
+
+.footer{
+  background-color: #f7f7f7;
+}
+.wrapper{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo{
+  img{
+    height: 65px;
+  }
+}
+.infoWrapper{
+  margin: 3rem 0 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+
+  li{
+    line-height: 2rem;
+    text-align: center;
+  }
+}
