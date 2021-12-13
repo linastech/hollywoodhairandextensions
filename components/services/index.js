@@ -6,30 +6,32 @@ import styles from './Services.module.scss'
 
 export default function Services() {
   return (
-    <div>
+    <div className={styles.container}>
       <Heading>Our Services</Heading>
 
       <div className={styles.contentWrapper}>
         <Item width="350px" height="350px" image="beaded" />
         <div className={styles.content}>
-          <h3>Beaded Hair Extensions</h3>
-          <div>
-            <span>Duration: </span>
-            <span className={styles.bold}>30 minutes</span>
+          <div className={styles.innerWrapper}>
+            <h3>Beaded Hair Extensions</h3>
+            <div>
+              <span>Duration: </span>
+              <span className={styles.bold}>30 minutes</span>
+            </div>
+            <div>
+              <span>Price: </span>
+              <span className={styles.bold}>75$</span>
+            </div>
+            <div className={styles.textWrapper}>
+              <p>
+                Beaded hair extensions are extensions where the hair is installed using a loop tool and secured to your head. Extensions lay flat against the head, and hair maintains 360 degrees of movement using this method; therefore, the client can wear their hair up or down as they please.
+              </p>
+            </div>
+            <div>
+              <Button>Learn More</Button>
+            </div>
+            <div className={styles.line} />
           </div>
-          <div>
-            <span>Price: </span>
-            <span className={styles.bold}>75$</span>
-          </div>
-          <div>
-            <p>
-              Beaded hair extensions are extensions where the hair is installed using a loop tool and secured to your head. Extensions lay flat against the head, and hair maintains 360 degrees of movement using this method; therefore, the client can wear their hair up or down as they please.
-            </p>
-          </div>
-          <div>
-            <Button>Learn More</Button>
-          </div>
-          <div className={styles.line} />
         </div>
       </div>
       <div className={styles.listWrapper}>

@@ -1,1 +1,19 @@
-// components/galery/Galery.module.scss
+.container{
+  :global {
+    .slick-center{
+      transform: scale(1.3);
+    }
+    .slick-slide{
+      transition: ease-in-out transform 300ms;
+    }
+  }
+}
+
+.item{
+  .inner{
+    padding: 10%;
+    img{
+      width: 100%;
+    }
+  }
+}
