@@ -24,7 +24,11 @@ const settings = {
   infinite: true,
   centerPadding: "0px",
   slidesToShow: 3,
-  speed: 500
+  slidesToScroll: 1,
+  speed: 500,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 5000
 };
 
 export default function Galery() {

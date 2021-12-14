@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Services from '../components/services'
 import Feedback from '../components/feedback'
 import Galery from '../components/galery'
+import Openhours from '../components/openhours'
 import Button from '../components/button'
 import styles from './Home.module.scss'
 
@@ -33,6 +34,7 @@ export default function Index() {
           <Services />
           <Feedback />
           <Galery />
+          <Openhours />
         </div>
       </Layout>
     </>

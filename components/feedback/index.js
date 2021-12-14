@@ -16,7 +16,7 @@ const list = [
 
 export default function Feedback() {
   return (
-    <div>
+    <div className={styles.wrapper}>
       <Heading>What our clients say</Heading>
 
       <div className={styles.container}>

@@ -6,6 +6,37 @@
     .slick-slide{
       transition: ease-in-out transform 300ms;
     }
+    .slick-dots{
+      display: flex !important;
+      justify-content: center;
+      margin: 3rem 0;    
+      li{
+        position: relative;
+        width: 13px;
+        height: 13px;
+        margin: 0 5px;
+        button{
+          width: 100%;
+          height: 100%;
+          font-size: 0px;
+          position: relative;
+          content: "&nbsp";
+          position: absolute;
+          border-radius: 11px;
+          background: #f2f2f2;
+          cursor: pointer;
+          padding: 0px;
+          transition: background ease-in 150ms;
+        }
+        &.slick-active button,
+        &:hover button{
+          background: #7b9cee;
+        }
+      }
+    }
+    .slick-arrow{
+      display: none !important;
+    }
   }
 }
 
