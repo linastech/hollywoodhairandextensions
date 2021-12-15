@@ -1,5 +1,4 @@
 // pages/index.js
-import clsx from 'clsx'
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Services from '../components/services'

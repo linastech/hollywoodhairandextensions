@@ -1,0 +1,17 @@
+.container{
+  background: #f7f7f7;
+  padding: 3rem 0;
+  .content{
+    width: 70%;
+    margin: 0 auto;
+    h1{
+      font-size: 2.5rem;
+      margin: 0 0 1.5rem;
+      font-family: 'Playfair Display', serif;
+      text-transform: uppercase;
+    }
+    .path{
+      color: #666666;
+    }
+  }
+}

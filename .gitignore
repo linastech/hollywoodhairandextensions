@@ -77,3 +77,4 @@ typings/
 .vscode
 .vscode/sftp.json
 .vscode/sftp.json
+.env.local

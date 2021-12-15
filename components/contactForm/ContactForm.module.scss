@@ -1,0 +1,40 @@
+.container{
+  .colWrapper{
+    display: flex;
+    justify-content: space-between;
+    > div {
+      width: 48%;
+    }
+  }
+  .field{
+    position: relative;
+    .error{
+      position: absolute;
+      bottom: 16px;
+      padding-left: 1rem;
+      color: #1a40cd;
+      &::first-letter{
+        text-transform: uppercase;
+      }
+    }
+  }
+  textarea{
+    height: 12rem;
+  }
+  input, textarea{
+    margin-bottom: 3rem;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: transparent;
+    line-height: 3.5rem;
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #666;
+    &:focus, &:focus-visible{
+      outline: none;
+    }
+    &::placeholder{
+      font-family: 'Nanum Gothic', sans-serif;
+    }
+  }
+}
