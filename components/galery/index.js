@@ -4,7 +4,7 @@ import Heading from '../heading'
 import { v4 as uuidv4 } from 'uuid'
 import Slider from "react-slick"
 import styles from './Galery.module.scss'
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css"
 
 const images = [
   '/img/carousel/1.jpg',
@@ -29,7 +29,7 @@ const settings = {
   dots: true,
   autoplay: true,
   autoplaySpeed: 5000
-};
+}
 
 export default function Galery() {
   return (

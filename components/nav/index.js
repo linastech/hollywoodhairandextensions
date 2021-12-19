@@ -1,12 +1,10 @@
 // components/nav/index.js
-
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './Nav.module.scss'
 
 export default function Nav() {
   const router = useRouter()
-
   return (
     <header>
       <nav  className={styles.navigation}>
@@ -21,36 +19,49 @@ export default function Nav() {
         <div className={styles.menu}>
           <ul>
             <li>
-              <Link href="/">
-                <a className={router.pathname == "/" ?  styles.active: null}>
-                  Home
-                </a>
-              </Link>
+              <ActiveLink href="/" name="Home" />
             </li>
             <li>
-              <Link href="/services">
-                <a className={router.pathname == "/services" ?  styles.active: null}>
-                  Services
-                </a>
-              </Link>
+              <ActiveLink href="/services" name="Services" />
+                <ol className={styles.subMenu}>
+                  <li>
+                    <ActiveLink href="/beaded-hair-extensions" name="Beaded Hair Extensions" />
+                  </li>
+                  <li>
+                    <ActiveLink href="/cold-fusion-hair-extensions" name="Cold Fusion Hair Extensions" />
+                  </li>
+                  <li>
+                    <ActiveLink href="/fusion-hair-extensions" name="Fusion Hair Extensions" />
+                  </li>
+                  <li>
+                    <ActiveLink href="/tape-in-hair-extensions" name="Tape-In Hair Extensions" />
+                  </li>
+                </ol>
             </li>
             <li>
-              <Link href="/about">
-                <a className={router.pathname == "/about" ?  styles.active: null}>
-                  About us
-                </a>
-              </Link>
+              <ActiveLink href="/hair-highlights" name="Hair Highlights & Cuts Gallery" />
             </li>
             <li>
-              <Link href="/contact">
-                <a className={router.pathname == "/contact" ?  styles.active: null}>
-                  Contact
-                </a>
-              </Link>
+              <ActiveLink href="/about" name="About us" />
+            </li>
+            <li>
+              <ActiveLink href="/contact" name="Contact" />
             </li>
           </ul>
         </div>
       </nav>
     </header>
+  )
+}
+
+const ActiveLink = ({href, name}) => {
+  const router = useRouter()
+
+  return (
+    <Link href={href}>
+      <a className={router.pathname == href ?  styles.active: null}>
+        {name}
+      </a>
+    </Link>
   )
 }

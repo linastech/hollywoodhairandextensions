@@ -1,0 +1,26 @@
+.contentWrapper{
+  width: 70%;
+  margin: 0 auto;
+  h3{
+    font-size: 2rem;
+    margin: 2.5rem 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+.wrapper{
+  display: flex;
+  .beforeAfter{
+    width: 32%;
+  }
+  .gallery{
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3{
+      margin-top: 0;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css');
 @import './imports/_reset';
 
 html, body, #__next{
@@ -11,9 +12,21 @@ html, body, a{
 a{
   text-decoration: none;
 }
+p{
+  line-height: 2rem;
+  font-size: 1rem;
+  margin: 2rem 0;
+}
 footer{
   margin-top: auto;
 }
 *{
   box-sizing: border-box;
+}
+.bold{
+  font-weight: bold;
+}
+.contactlink{
+  color: #3a64cc;
+  text-decoration: underline;
 }

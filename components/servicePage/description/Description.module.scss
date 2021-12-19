@@ -1,0 +1,28 @@
+.container{
+  margin: 4rem auto;
+  width: 75%;
+  overflow: hidden;
+  .image{
+    width: 35%;
+    float: right;
+    margin: 0 0 3rem 3rem;
+    border: 1px solid #dddddd;
+    padding: 6px;
+  }
+  .body{
+    h1{
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin: 2rem 0;
+    }
+    h2{
+      font-size: 1.2rem;
+      line-height: 2rem;
+      font-weight: 600;
+    }
+    p{
+      margin: 2rem 0;
+      line-height: 2rem;
+    }
+  }
+}
