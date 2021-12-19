@@ -57,6 +57,8 @@ export default function ContactForm(){
                 <div className={styles.field}>
                   <Field name="email" type="email" placeholder="E-mail" />
                   {errors.email && touched.email ? <div>{errors.email}</div> : null}
+                </div>
+                <div className={styles.field}>
                   <Field name="phone" placeholder="Phone Number" />
                   {errors.phone && touched.phone ? (
                     <div className={styles.error}>{errors.phone}</div>

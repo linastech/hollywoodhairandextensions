@@ -28,7 +28,7 @@
       display: flex;
       justify-content: space-evenly;
       width: 70%;
-      li:first-child a{
+      a.active{
         color: #7b9cee;
       }
       li:hover{

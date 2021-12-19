@@ -7,15 +7,15 @@ import styles from './Galery.module.scss'
 import "slick-carousel/slick/slick.css"; 
 
 const images = [
-  '/img/carousel/one.jpg',
-  '/img/carousel/one.jpg',
-  '/img/carousel/one.jpg',
-  '/img/carousel/one.jpg',
-  '/img/carousel/one.jpg',
-  '/img/carousel/one.jpg',
-  '/img/carousel/one.jpg',
-  '/img/carousel/one.jpg',
-  '/img/carousel/one.jpg'
+  '/img/carousel/1.jpg',
+  '/img/carousel/2.jpg',
+  '/img/carousel/3.jpg',
+  '/img/carousel/4.jpg',
+  '/img/carousel/5.jpg',
+  '/img/carousel/6.jpg',
+  '/img/carousel/7.jpg',
+  '/img/carousel/8.jpg',
+  '/img/carousel/9.jpg'
 ]
 
 const settings = {
@@ -38,7 +38,7 @@ export default function Galery() {
 
       <div className={styles.container}>
         <Slider {...settings}>
-          {images.map((value, index) => 
+          {images.map((image, index) => 
             <div 
               key={uuidv4()} 
               className={clsx(
@@ -46,7 +46,7 @@ export default function Galery() {
               )}
             >
               <div className={styles.inner}>
-                <img alt={index} src="/img/carousel/one.jpg" />
+                <img alt={index} src={image} />
               </div>
             </div>
           )}  

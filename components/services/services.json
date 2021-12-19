@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Beaded Hair Extensions",
+    "duration": "30 minutes",
+    "price": "75$",
+    "description": "Beaded hair extensions are extensions where the hair is installed using a loop tool and secured to your head. Extensions lay flat against the head, and hair maintains 360 degrees of movement using this method; therefore, the client can wear their hair up or down as they please.",
+    "img": "img/hairstyles/beaded.jpg"
+  },
+  {
+    "title": "Cold Fusion",
+    "duration": "30 minutes",
+    "price": "75$",
+    "description": "Do you want to change up your look? Are you looking for extra volume or want to experiment with different colors? Hair extensions are the perfect way to achieve your hair goals!",
+    "img": "img/hairstyles/cold_fusion.jpg"
+  },
+  {
+    "title": "Fusion Hair",
+    "duration": "30 minutes",
+    "price": "75$",
+    "description": "Hair extensions are a great way to transform your hair overnight! They are great for adding volume and length, as well as the perfect way to hide a bad haircut or experiment with new color without damaging your hair. ",
+    "img": "img/hairstyles/fusion.jpg"
+  },
+  {
+    "title": "Tape-In Hair",
+    "duration": "30 minutes",
+    "price": "75$",
+    "description": "Tape-In hair extensions are the most requested semi-permanent method in salons around the world. 100% Remy human hair is pre-taped and ready to apply. Hair extensions allow you to switch up your hair to a longer, fuller, more voluminous style.",
+    "img": "img/hairstyles/highlights.jpg"
+  },
+  {
+    "title": "Hair Highlights & Cuts",
+    "duration": "30 minutes",
+    "price": "75$",
+    "description": "Hollywood Hair and Extensions offer the personal and professional attention you deserve. We stay on top of the latest hair trends and the most up-to-date hair extension techniques. Our experts offer personal and professional attention so you never feel uncared for or rushed.",
+    "img": "img/hairstyles/tape_in.jpg"
+  }
+]

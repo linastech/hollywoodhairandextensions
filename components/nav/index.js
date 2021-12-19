@@ -22,22 +22,30 @@ export default function Nav() {
           <ul>
             <li>
               <Link href="/">
-                <a>Home</a>
+                <a className={router.pathname == "/" ?  styles.active: null}>
+                  Home
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/services">
-                <a>Services</a>
+                <a className={router.pathname == "/services" ?  styles.active: null}>
+                  Services
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/about">
-                <a>About us</a>
+                <a className={router.pathname == "/about" ?  styles.active: null}>
+                  About us
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/contact">
-                <a>Contact</a>
+                <a className={router.pathname == "/contact" ?  styles.active: null}>
+                  Contact
+                </a>
               </Link>
             </li>
           </ul>
