@@ -51,7 +51,7 @@ export default function BeadedHairExtensions(){
           <p>
             If you want to achieve the perfect hair for your wedding day, prom night, or any other special occasion, contact Hollywood Hair and Extensions. We offer the personal and professional attention you deserve so that you never feel uncared for or rushed! 
           </p>
-          <Button>Online contact request</Button>
+          <Button href="/contact">Online contact request</Button>
           <p className={styles.footer}>
             One hair extension method we offer is fusion hair extensions! It is one of the oldest and most effective techniques in the world of hair. It has gained popularity because of its natural appearance, long-lasting durability, and easy removal process. But what are fusion hair extensions, and how do the application and removal processes work?
           </p>
@@ -64,7 +64,7 @@ export default function BeadedHairExtensions(){
               after="/img/servicePages/fusionHairExtensions/after.jpg" 
             />
             <div className={styles.galleryButton}>
-              <Button>See more styles in gallery</Button>
+              <Button href="/hair-highlights">See more styles in gallery</Button>
             </div>
           </div>
           <div className={styles.qa}>

@@ -23,7 +23,7 @@ export default function Index() {
               thicker hair!
             </h1>
             <div className={styles.button}>
-              <Button>Book now!</Button>
+              <Button href="/contact">Book now!</Button>
             </div>
           </div>
           <div className={styles.heroBG} />

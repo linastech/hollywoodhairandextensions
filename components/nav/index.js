@@ -1,10 +1,37 @@
 // components/nav/index.js
+import { useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import styles from './Nav.module.scss'
 
 export default function Nav() {
   const router = useRouter()
+  const services = ['/beaded-hair-extensions', '/cold-fusion-hair-extensions', '/fusion-hair-extensions', '/tape-in-hair-extensions']
+
+  const handleScroll = () => {
+    const destination = document.querySelector('.servicesScroll')
+
+    if (destination) {
+      destination.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', url => {
+      if(url === '/#services')
+        handleScroll()
+    })
+  })
+
+  const handleClick = () => {
+    if(router.pathname != '/')
+      router.push('/', '/#services')
+
+    if(router.pathname != '/#services')
+      handleScroll()
+  }
   return (
     <header>
       <nav  className={styles.navigation}>
@@ -22,7 +49,14 @@ export default function Nav() {
               <ActiveLink href="/" name="Home" />
             </li>
             <li>
-              <ActiveLink href="/services" name="Services" />
+              <a 
+                onClick={handleClick}
+                className={
+                  services.indexOf(router.pathname) > -1 ? styles.active: null
+                }
+                >
+                  Services
+                </a>
                 <ol className={styles.subMenu}>
                   <li>
                     <ActiveLink href="/beaded-hair-extensions" name="Beaded Hair Extensions" />

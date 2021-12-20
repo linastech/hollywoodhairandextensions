@@ -1,5 +1,6 @@
 [
   {
+    "href": "/beaded-hair-extensions",
     "title": "Beaded Hair Extensions",
     "duration": "30 minutes",
     "price": "75$",
@@ -7,6 +8,7 @@
     "img": "img/hairstyles/beaded.jpg"
   },
   {
+    "href": "/cold-fusion-hair-extensions",
     "title": "Cold Fusion",
     "duration": "30 minutes",
     "price": "75$",
@@ -14,6 +16,7 @@
     "img": "img/hairstyles/cold_fusion.jpg"
   },
   {
+    "href": "/fusion-hair-extensions",
     "title": "Fusion Hair",
     "duration": "30 minutes",
     "price": "75$",
@@ -21,6 +24,7 @@
     "img": "img/hairstyles/fusion.jpg"
   },
   {
+    "href": "/tape-in-hair-extensions",
     "title": "Tape-In Hair",
     "duration": "30 minutes",
     "price": "75$",
@@ -28,6 +32,7 @@
     "img": "img/hairstyles/highlights.jpg"
   },
   {
+    "href": "/hair-highlights",
     "title": "Hair Highlights & Cuts",
     "duration": "30 minutes",
     "price": "75$",

@@ -56,7 +56,7 @@ export default function BeadedHairExtensions(){
           <p>
             At Hollywood Hair and Extensions, we specialize in hair extensions. You can get your hair the way you want it! We offer the personal and professional attention you deserve so that you never feel uncared for or rushed! We stay on top of the latest hair trends and the most up-to-date hair extension techniques.
           </p>
-          <Button>Online contact request</Button>
+          <Button href="/contact">Online contact request</Button>
           <p className={styles.footer}>
             There are four main types of hair extensions in which we specialize. Beaded extensions are one of them. If you have a question about our beaded hair extensions or any other services we offer, please contact us to schedule a consultation!
           </p>
@@ -69,7 +69,7 @@ export default function BeadedHairExtensions(){
               after="/img/servicePages/beadedHairExtensions/after.jpg" 
             />
             <div className={styles.galleryButton}>
-              <Button>See more styles in gallery</Button>
+              <Button href="/hair-highlights">See more styles in gallery</Button>
             </div>
           </div>
           <div className={styles.qa}>

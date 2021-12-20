@@ -34,7 +34,7 @@ const settings = {
 export default function Galery() {
   return (
     <div>
-      <Heading>Galery</Heading>
+      <Heading>Gallery</Heading>
 
       <div className={styles.container}>
         <Slider {...settings}>

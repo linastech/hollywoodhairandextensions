@@ -57,7 +57,7 @@ export default function BeadedHairExtensions(){
           <p>
             We offer the personal and professional attention you deserve so that you never feel uncared for or rushed! We stay on top of the latest hair trends and the most up-to-date hair extension techniques. 
           </p>
-          <Button>Online contact request</Button>
+          <Button href="/contact">Online contact request</Button>
           <p className={styles.footer}>
             Cold fusion hair extensions are one type of extensions that we offer at Hollywood Hair and Extensions. We use hair made from 100% human Remy hair which comes in various colors and textures. But what are cold fusion hair extensions, and are they the right type for you?
           </p>
@@ -70,7 +70,7 @@ export default function BeadedHairExtensions(){
               after="/img/servicePages/coldFusionHairExtensions/after.jpg" 
             />
             <div className={styles.galleryButton}>
-              <Button>See more styles in gallery</Button>
+              <Button href="/hair-highlights">See more styles in gallery</Button>
             </div>
           </div>
           <div className={styles.qa}>

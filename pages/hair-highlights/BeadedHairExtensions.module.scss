@@ -9,8 +9,11 @@
   }
 }
 
-.wrapper{
+.section{
   display: flex;
+  &.reverse{
+    flex-direction: row-reverse;
+  }
   .beforeAfter{
     width: 32%;
   }
@@ -23,4 +26,11 @@
       margin-top: 0;
     }
   }
+}
+.divider {
+  height: 2px;
+  width: 80%;
+  background: #7bc9ee;
+  background: linear-gradient(90deg, #ffffff, #7bc9ee, #ffffff);
+  margin: 10rem auto;
 }

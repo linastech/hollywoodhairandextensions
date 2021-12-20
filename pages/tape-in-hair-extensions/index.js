@@ -56,7 +56,7 @@ export default function BeadedHairExtensions(){
           <p>
             At Hollywood Hair and Extensions, you can get your hair the way you want it! We offer the personal and professional attention you deserve so that you never feel uncared for or rushed! We stay on top of the latest hair trends and the most up-to-date hair extension techniques. 
           </p>
-          <Button>Online contact request</Button>
+          <Button href="/contact">Online contact request</Button>
           <p className={styles.footer}>
             If you want hair extensions, we will help you determine which type and style are best for you. We will teach you how to care for your hair extensions properly so you get the most out of them by ensuring they are healthy during their lifetime. We will also teach you how to care for your natural hair to improve its quality over time.
           </p>
@@ -69,7 +69,7 @@ export default function BeadedHairExtensions(){
               after="/img/servicePages/tapeInHairExtensions/after.jpg" 
             />
             <div className={styles.galleryButton}>
-              <Button>See more styles in gallery</Button>
+              <Button href="/hair-highlights">See more styles in gallery</Button>
             </div>
           </div>
           <div className={styles.qa}>

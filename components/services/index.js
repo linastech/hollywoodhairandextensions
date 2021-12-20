@@ -11,7 +11,7 @@ export default function Services() {
   const [selectedService, pickService] = useState(services[0])
 
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, 'servicesScroll')}>
       <Heading>Our Services</Heading>
 
       <div className={styles.contentWrapper}>
@@ -31,7 +31,7 @@ export default function Services() {
               <p>{selectedService.description}</p>
             </div>
             <div>
-              <Button>Learn More</Button>
+              <Button href={selectedService.href}>Learn More</Button>
             </div>
             <div className={styles.line} />
           </div>

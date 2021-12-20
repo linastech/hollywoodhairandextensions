@@ -2,10 +2,11 @@
 $active: #7b9cee;
 
 .navigation{
-  height: 80px;
-  max-width: 1140px;
-  margin: 0 auto;
+  height: 8rem;
+  display: -moz-box;
   display: flex;
+  width: 90%;
+  margin: 0 auto;
 
   .logo{
     display: flex;
@@ -27,29 +28,33 @@ $active: #7b9cee;
     ul{
       display: flex;
       justify-content: space-evenly;
-      width: 80%;
+      margin-left: -8rem;
       a.active{
         color: $active;
+        &::before{
+          right: 0;
+        }
       }
       > li{
         position: relative;
-        &::before{
-          content: " ";
-          background-color: #9fbaff;
-          height: 1px;
-          position: absolute;
-          transition: right ease-in-out 0.3s;
-          bottom: -6px;
-          left: 0;
-          margin: 0 2rem;
-          right: 100%;
-        }
         > a{
           padding: 2rem;
+          cursor: pointer;
+          &::before{
+            content: " ";
+            background-color: #9fbaff;
+            height: 1px;
+            position: absolute;
+            transition: right ease-in-out 0.3s;
+            bottom: -6px;
+            left: 0;
+            margin: 0 2rem;
+            right: 100%;
+          }
         }
       }
       > li:hover{
-        &::before{
+        a::before{
           right: 0;
         }
         > a{

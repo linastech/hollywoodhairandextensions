@@ -25,7 +25,7 @@ export default function Openhours() {
                 <li>7:00pm - 10:00pm</li>
               </ul>
             </div>
-            <Button>Contact</Button>
+            <Button href="/contact">Contact</Button>
           </div>
         </div>
         <div className={styles.image}>

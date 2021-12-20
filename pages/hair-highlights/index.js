@@ -10,16 +10,58 @@ import styles from './BeadedHairExtensions.module.scss'
 import gStyles from '../../components/galery/Galery.module.scss'
 
 
-const images = [
-  '/img/carousel/1.jpg',
-  '/img/carousel/2.jpg',
-  '/img/carousel/3.jpg',
-  '/img/carousel/4.jpg',
-  '/img/carousel/5.jpg',
-  '/img/carousel/6.jpg',
-  '/img/carousel/7.jpg',
-  '/img/carousel/8.jpg',
-  '/img/carousel/9.jpg'
+const data = [
+  {
+    title: "Balayage on Brown Hair & Glaze",
+    before: "/img/hairHighlightGalery/balayage/before.jpg",
+    after: "/img/hairHighlightGalery/balayage/after.jpg",
+    images: [
+      '/img/hairHighlightGalery/balayage/1.jpg',
+      '/img/hairHighlightGalery/balayage/2.jpg',
+      '/img/hairHighlightGalery/balayage/3.jpg',
+      '/img/hairHighlightGalery/balayage/4.jpg',
+      '/img/hairHighlightGalery/balayage/5.jpg',
+      '/img/hairHighlightGalery/balayage/6.jpg'
+    ]
+  },
+  {
+    title: "Hair Highlights & Single Color Process",
+    before: "/img/hairHighlightGalery/singleColorProcess/before.jpg",
+    after: "/img/hairHighlightGalery/singleColorProcess/after.jpg",
+    images: [
+      '/img/hairHighlightGalery/singleColorProcess/1.jpg',
+      '/img/hairHighlightGalery/singleColorProcess/2.jpg',
+      '/img/hairHighlightGalery/singleColorProcess/1.jpg',
+      '/img/hairHighlightGalery/singleColorProcess/2.jpg',
+    ]
+  },
+  {
+    title: "Keratin Blow Out & Cut",
+    before: "/img/hairHighlightGalery/keratinBlowOutandCut/before.jpg",
+    after: "/img/hairHighlightGalery/keratinBlowOutandCut/after.jpg",
+    images: [
+      '/img/hairHighlightGalery/keratinBlowOutandCut/1.jpg',
+      '/img/hairHighlightGalery/keratinBlowOutandCut/2.jpg',
+      '/img/hairHighlightGalery/keratinBlowOutandCut/3.jpg',
+      '/img/hairHighlightGalery/keratinBlowOutandCut/4.jpg',
+      '/img/hairHighlightGalery/keratinBlowOutandCut/5.jpg',
+      '/img/hairHighlightGalery/keratinBlowOutandCut/6.jpg'
+    ]
+  },
+  {
+    title: "Hair Highlights & Glaze",
+    before: "/img/hairHighlightGalery/hairHighlightsandGlaze/before.jpg",
+    after: "/img/hairHighlightGalery/hairHighlightsandGlaze/after.jpg",
+    images: [
+      '/img/hairHighlightGalery/hairHighlightsandGlaze/1.jpg',
+      '/img/hairHighlightGalery/hairHighlightsandGlaze/2.jpg',
+      '/img/hairHighlightGalery/hairHighlightsandGlaze/3.jpg',
+      '/img/hairHighlightGalery/hairHighlightsandGlaze/4.jpg',
+      '/img/hairHighlightGalery/hairHighlightsandGlaze/5.jpg',
+      '/img/hairHighlightGalery/hairHighlightsandGlaze/6.jpg',
+      '/img/hairHighlightGalery/hairHighlightsandGlaze/7.jpg'
+    ]
+  }
 ]
 
 const settings = {
@@ -43,25 +85,37 @@ export default function BeadedHairExtensions(){
       </Head>
       <div className={styles.contentWrapper}>
         <Heading>Hair Highlights & Cuts Gallery</Heading>
-          <div className={styles.wrapper}>
-            <div className={styles.beforeAfter}>
-              <BeforeAfter 
-                before="/img/hairHighlightGalery/balayage/before.jpg"
-                after="/img/hairHighlightGalery/balayage/after.jpg" 
-              />
-            </div>
-            <div className={styles.gallery}>
-              <h3>Balayage on Brown Hair & Glaze</h3>
-              <Gallery />
-            </div>
-          </div>
+          {data.map((hairStyle, index) => (
+            <>
+              <div 
+                className={clsx(
+                  index % 2 === 0 ? styles.reverse : null,
+                  styles.section
+                )}
+              >
+                <div className={styles.beforeAfter}>
+                  <BeforeAfter 
+                    before={hairStyle.before}
+                    after={hairStyle.after}
+                  />
+                </div>
+                <div className={styles.gallery}>
+                  <h3>{hairStyle.title}</h3>
+                  <Gallery images={hairStyle.images} />
+                </div>
+              </div>
+              {index < (data.length - 1) && (
+                <div className={styles.divider} />
+              )}
+            </>
+          ))}
       </div>
     </Layout>
   )
 }
 
 
-const Gallery = ({items}) => {
+const Gallery = ({images}) => {
   return (
     <div className={gStyles.container}>
       <Slider {...settings}>
