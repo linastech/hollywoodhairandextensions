@@ -78,3 +78,4 @@ typings/
 .vscode/sftp.json
 .vscode/sftp.json
 .env.local
+yarn.lock

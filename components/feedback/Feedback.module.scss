@@ -5,20 +5,25 @@
   z-index: 1;
 }
 .image{
-  box-shadow: 0px 0px 6px -2px #000000;
   position: relative;
   z-index: 1;
   margin: 0rem 0 0;
-  height: 34rem;
-  margin: 4rem 0 0; 
-  img{
-    height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  >div {
+    width: 100%;
+    img{
+      box-shadow: 0px 0px 6px -2px #000000;
+      width: 100%;
+      display: block;
+    }
   }
 }
 .content{
   position: relative;
   z-index: 1;
-  flex: 1;
+  width: 50%;
   .messageBox{
     padding: 0 4rem;
     width: 65%;
@@ -53,9 +58,11 @@
 }
 .shadow{
   background: url(/img/clientssay.png);
-  width: 1456px;
-  height: 108px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   margin-top: -54px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

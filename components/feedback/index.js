@@ -72,7 +72,9 @@ export default function Feedback() {
 
       <div className={styles.container}>
         <div className={styles.image}>
-          <img src={list[selected].image} />
+          <div>
+            <img src={list[selected].image} />
+          </div>
         </div>
         <div className={styles.content}>
           <div className={styles.messageBox}>

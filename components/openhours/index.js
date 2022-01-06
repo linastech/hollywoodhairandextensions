@@ -28,9 +28,7 @@ export default function Openhours() {
             <Button href="/contact">Contact</Button>
           </div>
         </div>
-        <div className={styles.image}>
-          <img src="/img/openhoursbg.jpg" />
-        </div>
+        <div className={styles.image} />
         <div className={styles.shadow} />
       </div>
     </div>
