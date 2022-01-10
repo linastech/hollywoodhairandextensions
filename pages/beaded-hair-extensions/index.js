@@ -1,5 +1,6 @@
 import Consultation from "../../components/consultation"
 import Faq from "react-faq-component"
+import useWindowSize from '../../hooks/useWindowSize'
 import Button from '../../components/button'
 import Heading from '../../components/heading'
 import Layout from '../../components/layout'
@@ -68,18 +69,29 @@ export default function BeadedHairExtensions(){
               before="/img/servicePages/beadedHairExtensions/before.jpg"
               after="/img/servicePages/beadedHairExtensions/after.jpg" 
             />
-            <div className={styles.galleryButton}>
-              <Button href="/hair-highlights">See more styles in gallery</Button>
-            </div>
+            {useWindowSize().width > 700 &&
+              <div className={styles.galleryButton}>
+                <Button href="/hair-highlights">See more styles in gallery</Button>
+              </div>
+            }
           </div>
           <div className={styles.qa}>
             <h3>What are beaded hair extensions?</h3>
             <p>
               Beaded hair extensions are extensions where the hair is installed using a loop tool and secured to your head by pairing small sections of the strand of extensions with your natural hair held together using a micro silicone bead. It might sound strange, but the bead is tiny and is the same color as the extension. Extensions lay flat against the head, and hair maintains 360 degrees of movement using this method; therefore, the client can wear their hair up or down as they please.
             </p>
-
-            <Faq data={faq} config={config} />
+            {useWindowSize().width > 700 &&
+              <Faq data={faq} config={config} />
+            }
           </div>
+          {useWindowSize().width < 700 &&
+            <>
+              <div className={styles.galleryButton}>
+                <Button href="/hair-highlights">See more styles in gallery</Button>
+              </div>
+              <Faq data={faq} config={config} />
+            </>
+          }
           <div className={styles.consultation}>
             <Consultation />
           </div>

@@ -1,4 +1,10 @@
 .container{
+  @media only screen and (max-device-width: 1024px){
+    button{
+      margin: 0 auto;
+      display: block;
+    }
+  }
   .colWrapper{
     display: flex;
     justify-content: space-between;

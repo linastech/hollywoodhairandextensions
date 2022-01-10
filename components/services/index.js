@@ -15,7 +15,7 @@ export default function Services() {
       <Heading>Our Services</Heading>
 
       <div className={styles.contentWrapper}>
-        <Item width="350px" height="350px" image={selectedService.img} />
+        <Item width="26rem" height="26rem" className="selected" image={selectedService.img} />
         <div className={styles.content}>
           <div className={styles.innerWrapper}>
             <h3>{selectedService.title}</h3>
@@ -40,10 +40,9 @@ export default function Services() {
       <div className={styles.listWrapper}>
         <ul>
           {services.map(service => (
-            <li key={uuidv4()}>
-              <Item width="150px" height="150px" image={service.img} />
+            <li onClick={() => pickService(service)} key={uuidv4()}>
+              <Item width="11rem" height="11rem" image={service.img} />
               <div
-                onClick={() => pickService(service)}
                 className={clsx(
                   styles.button, 
                   selectedService.title === service.title ? styles.active : null
@@ -58,13 +57,16 @@ export default function Services() {
   )
 }
 
-const Item = function({width, height, image}){
+const Item = function({width, height, image, className}){
   return <div 
     style={{
       width: width,
       height: height,
       backgroundImage: `url('${image}')`
     }}
-    className={styles.selected} 
+    className={clsx(
+      styles.itemContainer,
+      styles[className]
+    )} 
   />
 }

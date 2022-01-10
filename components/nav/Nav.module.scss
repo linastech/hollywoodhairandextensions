@@ -1,100 +1,264 @@
 // components/nav/Nav.module.scss
 $active: #7b9cee;
-
-.navigation{
-  height: 8rem;
-  display: -moz-box;
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-
-  .logo{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    > div {
-      height: 80%;
-      img{
+@media only screen and (max-device-width: 650px){
+  .header{
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    nav {
+      background-color: #010214;
+      height: 4rem;
+      border:1px solid #090c40bf;
+      input{
+        position: absolute;
         height: 100%;
+        width: 5rem;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 4;
+      }
+      .close{
+        position: absolute;
+        top: 1.3rem;
+        left: 1.3rem;
+      }
+      .close div{
+        position: relative;
+        z-index: 3;
+        width: 29px;
+        height: 2px;
+        margin-bottom: 5px;
+        background: #ffffff;
+        border-radius: 3px;
+        transform-origin: 5px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+        &:first-child{
+          transform-origin: 0% 0%;
+        }
+        &:nth-last-child(2){
+          transform-origin: 0% 100%;
+        }
+      }
+      input:checked ~ .close div{
+        opacity: 1;
+        background: #36383F;
+      }
+      input:checked ~ .close div:nth-last-child(1){
+        transform: rotate(-45deg) translate(-3px, -1px);
+      }
+      input:checked ~ .close div:nth-last-child(3){
+        transform: rotate(45deg) translate(0, -1px);
+      }
+      input:checked ~ .close div:nth-last-child(2){
+        opacity: 0;
+      }
+      input:checked ~ .menu{
+        transform: none;
+      }
+      .menu{
+        position: absolute;
+        top: 0;
+        margin-left: -10px;
+        width: 90vw;
+        height: 100vh;
+        box-shadow: 0 0 10px #85888C;
+        background-color: #F5F6FA;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        ul{
+          margin: 25% 0rem 0 2%;
+          padding: 0 0 0 10px;
+          @media only screen and (max-device-width: 450px){
+            margin: 25% 0rem 0 8%;
+            li a{
+              font-size: 1.4rem !important;
+            }
+          }
+          li{
+            padding: 1rem 0;
+            transition-delay: 2s;
+            a{
+              font-size: 1.7rem;
+              text-transform: uppercase;
+              &.active{
+                color: $active;
+              }
+              &:hover{
+                color: $active;
+              }
+            }
+            .caret{
+              cursor: pointer;
+              font-size: 22px;
+              line-height: 7px;
+              margin: 11px 0 0 7px;
+              vertical-align: top;
+            }
+          }
+          .subMenu{
+            position: relative;
+            margin: 0 0 1rem;
+            height: 0;
+            transition: height ease-in-out .5s;
+            overflow: hidden;
+            &.submenuActive{
+              height: 192px;
+            }
+            &::before, &::after{
+              position: absolute;
+              content: "";
+              left: 0;
+              width: 90%;
+              height: 1px;
+              background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #86a4f0d1);
+            }
+            &::before{
+              top: 5px;
+            }
+            &::after{
+              bottom: 5px;
+            }
+            ol{
+              margin: 0 2rem;
+              li:first-child{
+                margin-top: 1rem;
+              }
+              li:last-child{
+                margin-bottom: 1rem;
+              }
+            }
+          }
+        }
+        .mobileLogo{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          img{
+            height: 9vh;
+          }
+        }
       }
     }
   }
-
-  .menu{
-    flex-grow: 1;
+}
+@media only screen and (min-device-width: 650px){
+  .navigation{
+    height: 8rem;
+    display: -moz-box;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    ul{
+    width: 90%;
+    margin: 0 auto;
+    @media only screen and (max-device-width: 1000px){
+      width: 98%;
+    }
+    .logo{
       display: flex;
-      justify-content: space-evenly;
-      margin-left: -8rem;
-      a.active{
-        color: $active;
-        &::before{
-          right: 0;
+      justify-content: center;
+      flex-direction: column;
+      > div {
+        height: 80%;
+        @media only screen and (max-device-width: 1000px){
+          height: 50%;
         }
-      }
-      > li{
-        position: relative;
-        > a{
-          padding: 2rem;
-          cursor: pointer;
-          &::before{
-            content: " ";
-            background-color: #9fbaff;
-            height: 1px;
-            position: absolute;
-            transition: right ease-in-out 0.3s;
-            bottom: -6px;
-            left: 0;
-            margin: 0 2rem;
-            right: 100%;
-          }
+        img{
+          height: 100%;
         }
-      }
-      > li:hover{
-        a::before{
-          right: 0;
-        }
-        > a{
-          color: $active;
-        }
-        .subMenu{
-          opacity: 1;
-        }
-      }
-      a{
-        text-transform: uppercase;
-        font-weight: bold;
-        transition: color ease-in-out 0.3s;
       }
     }
-    .subMenu{
-      position: absolute;
-      box-shadow: 0px 0px 7px -4px #000000;
+
+    .menu{
+      flex-grow: 1;
       display: flex;
-      flex-direction: column;
-      width: 19rem;
-      left: -6rem;
-      top: 2.5rem;
-      opacity: 0;
-      z-index: 100;
-      li{
-        background: white;
-        transition: background-color ease-in-out 0.2s;
-        line-height: 3rem;
-        border-bottom: 1px solid #cccccc54;
-        &:hover{
-          background-color: #fbfbfb;
-          a{
-            color: $active;
+      align-items: center;
+      justify-content: center;
+      ul{
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: -8rem;
+        @media only screen and (max-device-width: 1300px){
+          width: 100%;
+          margin-left: 0;
+        }
+        a.active{
+          color: $active;
+          &::before{
+            right: 0;
           }
         }
+        > li{
+          position: relative;
+          > a{
+            padding: 2rem;
+            @media only screen and (max-device-width: 1000px){
+              padding: 0.5rem;
+            }
+            cursor: pointer;
+            &::before{
+              content: " ";
+              background-color: #9fbaff;
+              height: 1px;
+              position: absolute;
+              transition: right ease-in-out 0.3s;
+              bottom: -6px;
+              left: 0;
+              margin: 0 2rem;
+              right: 100%;
+            }
+          }
+        }
+        > li:hover{
+          a::before{
+            right: 0;
+          }
+          > a{
+            color: $active;
+          }
+          .subMenu{
+            opacity: 1;
+          }
+        }
+        a{
+          text-transform: uppercase;
+          font-weight: bold;
+          transition: color ease-in-out 0.3s;
+        }
+        .caret{
+          display: none;
+        }
       }
-      a {
-        display: block;
-        text-align: center;
+      .subMenu{
+        position: absolute;
+        box-shadow: 0px 0px 7px -4px #000000;
+        display: flex;
+        flex-direction: column;
+        width: 19rem;
+        left: -6rem;
+        top: 2.5rem;
+        opacity: 0;
+        z-index: 100;
+        li{
+          background: white;
+          transition: background-color ease-in-out 0.2s;
+          border-bottom: 1px solid #cccccc54;
+          a{
+            line-height: 2.5rem;
+          }
+          &:hover{
+            background-color: #fbfbfb;
+            a{
+              color: $active;
+            }
+          }
+        }
+        a {
+          display: block;
+          text-align: center;
+        }
       }
     }
   }

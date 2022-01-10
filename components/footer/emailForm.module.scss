@@ -4,11 +4,19 @@
   width: 39%;
   text-align: center;
   margin: 2rem 0 0;
+  @media only screen and (max-device-width: 650px){  
+    width: 80%;
+    max-width: 360px;
+  }
   .header{
     font-size: 1.3rem;
     font-weight: 400;
     font-family: 'Playfair Display', serif;
     line-height: 5rem;
+  }
+  @media only screen and (max-device-width: 650px){  
+    line-height: 2rem;
+    margin-bottom: 2rem;
   }
   .inputWrapper{
     background-color: #fff;

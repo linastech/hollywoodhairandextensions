@@ -14,10 +14,13 @@ export default function About(){
       <PageHeading title="About us" path="Home / About us" />
       <div className={styles.contentWrapper}>
         <div className={styles.story}>
-          <div className={styles.storyImage}>
-            <div className={styles.image} />
-            <div className={styles.imageShadow} />
+          <div className={styles.storyImageWrapper}>
+            <div className={styles.storyImage}>
+              <img className={styles.image} src="/img/aboutusbg.jpg" />
+              <div className={styles.imageShadow} />
+            </div>
           </div>
+          {/* <img className={styles.image} src="/img/aboutusbg.jpg" /> */}
           <div className={styles.storyContent}>
             <div className={styles.preHead}>My story</div>
             <h1>Hi I'm Olga!</h1>

@@ -5,7 +5,7 @@ import Heading from '../../components/heading'
 import Layout from '../../components/layout'
 import Description from '../../components/servicePage/description'
 import BeforeAfter from '../../components/servicePage/beforeAfter'
-import styles from './BeadedHairExtensions.module.scss'
+import styles from '../ServicePage.module.scss'
 import Head from 'next/head'
 
 const faq = {
@@ -35,7 +35,7 @@ const config = {
   tabFocus: true
 };
 
-export default function BeadedHairExtensions(){
+export default function FusionHairExtensions(){
   return (
     <Layout>
       <Head>

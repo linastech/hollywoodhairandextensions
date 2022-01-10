@@ -1,6 +1,7 @@
 // components/feedback/Openhours.module.scss
 .wrapper{
   margin-top: 10rem;
+  padding-bottom: 5px;
 }
 .container{
   position: relative;
@@ -15,6 +16,9 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+  @media only screen and (max-device-width: 650px){  
+    display: none;
+  }
 }
 .content{
   position: relative;

@@ -21,6 +21,14 @@
   display: flex;
   justify-content: space-evenly;
   width: 90%;
+  @media only screen and (max-device-width: 650px){  
+    width: 96%;
+    margin: 3rem auto;
+    flex-wrap: wrap;
+    ul{
+      margin: 1rem 2rem;
+    }
+  }
 
   li{
     line-height: 2rem;

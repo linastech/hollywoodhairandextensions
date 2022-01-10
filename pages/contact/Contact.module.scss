@@ -1,14 +1,28 @@
 .contentWrapper{
   width: 70%;
   margin: 0 auto;
+  @media only screen and (max-device-width: 1024px){  
+    width: 96%;
+  }
   .info{
     color: #666666;
     display: flex;
+    flex-wrap: wrap;
     .leftCol{
       width: 40%;
-      margin-top: 1rem;
+      margin-top: 4rem;
+      @media only screen and (max-device-width: 1024px){  
+        margin-top: 5rem;
+        order: 1;
+        flex: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+      }
       ul{
         margin: 0 0 2rem;
+        padding: 0 2rem;
       }
       li{
         line-height: 2.5rem;
